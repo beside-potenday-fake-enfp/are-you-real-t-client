@@ -50,12 +50,12 @@ const TesterLoginPage = () => {
   return (
     <div className="mx-[2rem] space-y-[3.2rem] my-[4rem]">
       <div>
-        <p className="text-gray-100 text-body1 font-semibold mb-[0.8rem]">
+        <p className="text-gray-100 text-label font-semibold mb-[0.8rem]">
           닉네임
         </p>
         <Input
           ref={nickNameInputRef}
-          className="w-full px-[2rem] py-[1.8rem]"
+          className="w-full px-[2rem] py-[1.8rem] text-detail"
           value={nickName}
           placeholder="닉네임을 입력해주세요 (최대 8글자)"
           onChange={(e: ChangeEvent<HTMLInputElement>) => {
@@ -69,7 +69,7 @@ const TesterLoginPage = () => {
       </div>
 
       <div>
-        <p className="text-gray-100 font-semibold mb-[0.8rem] text-body1">
+        <p className="text-gray-100 font-semibold mb-[0.8rem] text-label">
           MBTI
         </p>
 
@@ -121,7 +121,7 @@ const TesterLoginPage = () => {
                   return (
                     <div
                       key={`mbti_type_${type}`}
-                      className={`text-body1 text-center py-[2rem] rounded-[1rem] cursor-pointer ${
+                      className={`text-detail font-semibold text-center py-[2rem] rounded-[1rem] cursor-pointer ${
                         isSelected
                           ? "bg-gray-60 text-gray-100 font-bold"
                           : "bg-gray-25 text-gray-60"

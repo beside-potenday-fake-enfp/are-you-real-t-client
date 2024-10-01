@@ -12,7 +12,8 @@ const buttonVariants = cva(
         gray: "bg-gray-18 text-white shadow-sm hover:bg-gray-10 disabled:bg-gray-25 disabled:text-gray-60",
       },
       size: {
-        md: "rounded-[1.6rem] p-[1.6rem] text-label font-medium",
+        sm: "rounded-[0.4rem] py-[0.8rem] px-[1.6rem] text-label font-medium",
+        md: "rounded-[0.8rem] p-[1.6rem] text-label font-medium",
         lg: "rounded-[1.6rem] p-[1.6rem] text-button font-semibold",
       },
     },

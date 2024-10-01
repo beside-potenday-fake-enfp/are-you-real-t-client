@@ -13,7 +13,7 @@ const Authentication = () => {
 
   const { setIsLogin, setTesterId } = useAuthenticationStoreActions();
   setIsLogin(!!testerData);
-  setTesterId(testerData.testerId);
+  setTesterId(testerData?.testerId);
 
   return null;
 };

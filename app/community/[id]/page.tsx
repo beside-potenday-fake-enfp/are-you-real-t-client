@@ -3,8 +3,14 @@ import { getQuestion } from "@/hooks/api/question/useQuestion";
 import CommentSection from "./_components/comment/CommentSection";
 import QuestionDetailSection from "./_components/questionDetail/QuestionDetailSection";
 
-const CommunityPostPage = async () => {
-  const question = await getQuestion();
+interface ICommunityQuestionDetailPageProps {
+  params: { id: string };
+}
+
+const CommunityQuestionDetailPage = async ({
+  params: { id },
+}: ICommunityQuestionDetailPageProps) => {
+  const question = await getQuestion({ questionId: Number(id) });
 
   return (
     <div className="pb-[10rem] px-[2rem]">
@@ -24,4 +30,4 @@ const CommunityPostPage = async () => {
   );
 };
 
-export default CommunityPostPage;
+export default CommunityQuestionDetailPage;

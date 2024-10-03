@@ -9,7 +9,11 @@ export interface IAnswerDetail extends IAnswer {
   count: number;
 }
 
-export const getQuestion = async () => {
+interface IQuestionParams {
+  questionId: number;
+}
+
+export const getQuestion = async (params: IQuestionParams) => {
   // const response = await areYouRealTServiceServerFetchInstance<IQuestion>(
   //   "/questions",
   //   {
@@ -18,6 +22,8 @@ export const getQuestion = async () => {
   // );
 
   // return response;
+
+  console.log("##  getQuestion params", params);
 
   return {
     id: "1",

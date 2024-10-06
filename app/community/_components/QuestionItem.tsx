@@ -21,8 +21,6 @@ const QuestionItem = ({
 }) => {
   const { typeText } = mbtiTypeMetaMap[type];
 
-  console.log("## question", content, answerList, voteCount, commentCount);
-
   return (
     <Link href={`/community/${questionId}`}>
       <div className="rounded-[1.6rem] bg-gray-900 px-[2.3rem] py-[2.5rem]">
